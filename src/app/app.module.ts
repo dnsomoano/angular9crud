@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MemberAddComponent } from './member-add/member-add.component';
 import { MemberGetComponent } from './member-get/member-get.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MemberEditComponent } from './member-edit/member-edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

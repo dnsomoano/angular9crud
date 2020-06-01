@@ -4,7 +4,6 @@ import { MemberAddComponent } from './member-add/member-add.component';
 import { MemberGetComponent } from './member-get/member-get.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
 
-
 const routes: Routes = [
   {
     path: 'member/create',
