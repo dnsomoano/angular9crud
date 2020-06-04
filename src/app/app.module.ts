@@ -7,7 +7,10 @@ import { MemberAddComponent } from './member-add/member-add.component';
 import { MemberGetComponent } from './member-get/member-get.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClientModule } from "@angular/common/http";
+import { MemberService } from "./member.service";
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { ReactiveFormsModule } from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     SlimLoadingBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MemberService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

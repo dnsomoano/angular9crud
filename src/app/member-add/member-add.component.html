@@ -32,7 +32,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid">Create
+                <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid"
+                    (click)="addMember(MemberName.value, MemberBio.value, MemberAge.value)">Create
                     Member</button>
             </div>
         </form>
