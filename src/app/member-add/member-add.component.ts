@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-member-add',
@@ -6,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-add.component.css']
 })
 export class MemberAddComponent implements OnInit {
+  angForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.createForm();
+  }
 
-  constructor() { }
+  createForm() {
+    this.angForm = this.fb.group({
+      MemberName: ['', Validators.required],
+      MemberBio: ['', Validators.required],
+      MemberAge: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
   }
